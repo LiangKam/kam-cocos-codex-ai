@@ -4,12 +4,32 @@ export interface MCPServerSettings {
     enableDebugLog: boolean;
     allowedOrigins: string[];
     maxConnections: number;
+
+    /** Host interface used by the local HTTP server. Defaults to 127.0.0.1. */
+    host?: string;
+
+    /** Optional Bearer token. When requireAuth is true, requests must send Authorization: Bearer <authToken>. */
+    authToken?: string;
+
+    /** Whether to require Authorization header for /mcp and /api calls. /health stays public. */
+    requireAuth?: boolean;
+
+    /** If true, write calls can include clientWorkspaceRoot and the server blocks calls when it does not match Editor.Project.path. */
+    workspaceGuard?: boolean;
+
+    /** If true, dangerous tool actions require confirm: true. */
+    requireConfirmationForDangerousActions?: boolean;
+
+    /** Optional override list for dangerous actions. Format: toolName.action, for example node_lifecycle.delete. */
+    dangerousActions?: string[];
 }
 
 export interface ServerStatus {
     running: boolean;
     port: number;
     clients: number;
+    host?: string;
+    projectRoot?: string;
 }
 
 export interface ToolDefinition {
