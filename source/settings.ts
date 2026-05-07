@@ -6,8 +6,26 @@ const DEFAULT_SETTINGS: MCPServerSettings = {
     port: 3000,
     autoStart: false,
     enableDebugLog: false,
-    allowedOrigins: ['*'],
-    maxConnections: 10
+
+    // Safer default: only local origins. Use ['*'] only if you understand the risk.
+    allowedOrigins: ['http://127.0.0.1', 'http://localhost'],
+
+    maxConnections: 10,
+
+    // Safer default: bind to localhost instead of all interfaces.
+    host: '127.0.0.1',
+
+    // Set requireAuth=true and provide a strong token for normal usage.
+    // /health stays public; /mcp and /api/* are protected when enabled.
+    authToken: '',
+    requireAuth: false,
+
+    // Prevent Codex from writing to the wrong open Cocos project when
+    // clientWorkspaceRoot is provided in arguments.
+    workspaceGuard: true,
+
+    // Destructive/high-risk actions must include confirm: true.
+    requireConfirmationForDangerousActions: true
 };
 
 const DEFAULT_TOOL_MANAGER_SETTINGS: ToolManagerSettings = {
