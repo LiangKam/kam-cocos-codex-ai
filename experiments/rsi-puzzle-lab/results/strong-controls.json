@@ -1,0 +1,17 @@
+{
+  "split": "validation",
+  "cases": 256,
+  "budget": 900,
+  "repeats_each": 3,
+  "used_to_select_main_champion": false,
+  "holdout_used": false,
+  "results": [
+    {"name":"uniform_cost","solved":58,"invalid":0,"mean_charged_expansions":768.3828125,"median_wall_seconds":0.4573605650000445},
+    {"name":"manhattan_deep","solved":192,"invalid":0,"mean_charged_expansions":328.87890625,"median_wall_seconds":0.30124327800012907},
+    {"name":"linear_conflict_deep","solved":213,"invalid":0,"mean_charged_expansions":257.390625,"median_wall_seconds":0.9201271919998817},
+    {"name":"single_pattern_database_deep","solved":256,"invalid":0,"mean_charged_expansions":56.71484375,"median_wall_seconds":0.10683875100016849},
+    {"name":"expert_supplied_tools_combination","solved":256,"invalid":0,"mean_charged_expansions":35.75390625,"median_wall_seconds":0.22475237999992714},
+    {"name":"evolved_champion_1457a8a46d6073c8","solved":256,"invalid":0,"mean_charged_expansions":35.75390625,"median_wall_seconds":0.26677208499995686}
+  ],
+  "interpretation":"The evolved strategy matches, but does not outperform, the expert supplied-tool combination on expansion cost. Fewer expansions do not imply proportional wall-clock acceleration."
+}

@@ -1,0 +1,7 @@
+# 自动生成的策略；评估规则不在此文件中。
+# 下一代从已验收的本代 CONFIG 继续变异，不从零重置。
+CONFIG = {'expression': 'max(p2, 0)', 'tie': 'fifo'}
+
+def heuristic(m=0, mis=0, lc=0, p0=0, p1=0, p2=0):
+    """估计剩余步数；独立最优路径验证器负责拦截高估错误。"""
+    return max(p2, 0)

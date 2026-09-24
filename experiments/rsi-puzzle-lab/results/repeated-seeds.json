@@ -1,0 +1,13 @@
+{
+  "seeds_preselected":[7,42,20260924],
+  "seconds_each":90,
+  "same_training_validation_benchmark":true,
+  "used_to_select_main_champion":false,
+  "holdout_used":false,
+  "results":[
+    {"seed":7,"evaluated_candidates":226,"accepted_generations":15,"validation_solved":256,"validation_count":256,"mean_charged_expansions":42.19921875},
+    {"seed":42,"evaluated_candidates":246,"accepted_generations":6,"validation_solved":256,"validation_count":256,"mean_charged_expansions":35.75390625},
+    {"seed":20260924,"evaluated_candidates":266,"accepted_generations":6,"validation_solved":256,"validation_count":256,"mean_charged_expansions":35.75390625}
+  ],
+  "interpretation":"Repeated outcomes on the same benchmark, not evidence of general AI ability or out-of-distribution performance."
+}

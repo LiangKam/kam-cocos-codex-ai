@@ -1,0 +1,49 @@
+{
+  "state": "duration_completed",
+  "started_at_utc": "2026-09-24T05:57:30.310498+00:00",
+  "ended_at_utc": "2026-09-24T06:28:31.306585+00:00",
+  "target_seconds": 1860.0,
+  "elapsed_seconds": 1860.9960885760001,
+  "process_cpu_seconds": 1860.314618648,
+  "controller_sha256": "3f46a391963208c303867a15d91a90387ffbe421b8c40de5ac90aa2b5bd68545",
+  "feature_setup_seconds": 0.13141151700006048,
+  "evaluated_candidates": 2915,
+  "accepted_generations": 10,
+  "rejected_candidates": 2905,
+  "skipped_duplicate_or_guard": 9028,
+  "seed": 240927,
+  "external_llm_calls_inside_evolution_loop": 0,
+  "holdout_used_to_select": false,
+  "audit": {
+    "events_checked": 2915,
+    "all_parents_known": true,
+    "all_promotions_obey_frozen_rule": true,
+    "sampled_results_reexecuted": 34,
+    "all_sampled_result_fingerprints_match": true,
+    "candidate_completion_gap_max_seconds": 5.881380102000094,
+    "last_promotion_seconds": 24.996342580000032,
+    "plateau_seconds_at_snapshot": 1835.999745996
+  },
+  "files_sha256": {
+    "events.jsonl": "60d00d0b0eb0f802bbfa1c9cee117163a8ee8f6226d7adf020aa2277d9405e02",
+    "holdout.json": "52933598328a19c11759793526ed44f823a8abe1912371e99f1d0b7aab56c2fd",
+    "frozen.json": "311058251d2faa9fa6be1b0585cc26f81df33b1b5ebd4f2a9ad7f7b26710885a"
+  },
+  "baseline": {
+    "generation": 0,
+    "id": "f675443b54de88bc",
+    "validation": {"count":256,"solved":58,"invalid":0,"mean_expanded":768.3828125,"total_expanded":196706},
+    "holdout": {"count":512,"solved":112,"invalid":0,"mean_expanded":773.2578125,"total_expanded":395908}
+  },
+  "champion": {
+    "generation": 10,
+    "id": "1457a8a46d6073c8",
+    "source_sha256": "1457a8a46d6073c8b5b25da78a5b91763146c158d2c55afc03b1ad02acb95c0d",
+    "config": {"expression":"max(max(max(max(0.875 * max(p2, lc) + 0.125 * p0, p1), p2), p1), p0)","tie":"deep"},
+    "validation": {"count":256,"solved":256,"invalid":0,"mean_expanded":35.75390625,"total_expanded":9153},
+    "holdout": {"count":512,"solved":512,"invalid":0,"mean_expanded":38.3359375,"total_expanded":19628}
+  },
+  "unit_tests_passed": 53,
+  "browser_checks_passed": 16,
+  "browser_replay_coverage": {"scenarios_checked":55,"path_states_checked":970,"failed_scenarios_without_fake_path":5,"all_passed":true}
+}

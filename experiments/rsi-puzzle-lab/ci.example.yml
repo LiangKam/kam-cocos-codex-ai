@@ -1,0 +1,33 @@
+# 示例而非已启用的工作流；本次实测在对话执行环境完成。
+# 需要时将此文件放到仓库 .github/workflows/rsi-lab.yml。
+name: RSI Puzzle Lab manual replay
+on:
+  workflow_dispatch:
+    inputs:
+      seconds:
+        description: '运行秒数；1860 为 31 分钟'
+        default: '60'
+        required: true
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test and reproduce
+        working-directory: experiments/rsi-puzzle-lab
+        env:
+          RSI_SECONDS: ${{ inputs.seconds }}
+        run: python run.py --seconds "$RSI_SECONDS" --name ci-replay
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rsi-lab-results
+          path: |
+            experiments/rsi-puzzle-lab/runs/ci-replay
+            experiments/rsi-puzzle-lab/report-ci-replay.html
