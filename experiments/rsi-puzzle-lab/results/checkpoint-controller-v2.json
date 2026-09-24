@@ -1,0 +1,16 @@
+{
+  "experiment": "controller-v2, superseded after neighborhood exhaustion",
+  "budget": 900,
+  "validation_count": 256,
+  "holdout_used": false,
+  "history": [
+    {"generation":0,"at_seconds":0.849,"expression":"0","tie":"fifo","solved":58,"mean_expanded":768.3828125},
+    {"generation":1,"at_seconds":1.445,"expression":"p2","tie":"fifo","solved":243,"mean_expanded":153.3046875},
+    {"generation":2,"at_seconds":3.074,"expression":"max(p2,p0)","tie":"fifo","solved":253,"mean_expanded":104.453125},
+    {"generation":3,"at_seconds":4.624,"expression":"max(max(p2,p0),p1)","tie":"fifo","solved":254,"mean_expanded":92.8828125},
+    {"generation":4,"at_seconds":7.522,"expression":"max(max(p2,p0),p1)","tie":"mis","solved":256,"mean_expanded":55.26953125},
+    {"generation":5,"at_seconds":8.516,"expression":"max(max(max(p2,p0),p1),lc)","tie":"mis","solved":256,"mean_expanded":55.265625},
+    {"generation":6,"at_seconds":25.973,"expression":"max(max(max(p2,p0),p1),lc)","tie":"deep","solved":256,"mean_expanded":35.75390625}
+  ],
+  "note": "These are measured intermediate results, not the final 31-minute run. Times here are rounded; exact times remain in raw logs."
+}
